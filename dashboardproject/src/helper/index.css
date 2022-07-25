@@ -1,0 +1,19 @@
+.main {
+  width: "50%";
+  height: 100vh;
+  background-color: wheat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.center * {
+  padding: 5px;
+}
