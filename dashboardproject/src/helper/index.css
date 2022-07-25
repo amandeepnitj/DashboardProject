@@ -15,5 +15,9 @@
   flex-direction: column;
 }
 .center * {
-  padding: 5px;
+  margin: 5px;
+}
+
+.padding5 {
+  padding: 10px;
 }
