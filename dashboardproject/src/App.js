@@ -16,13 +16,14 @@ import Todolist from './components/Todolist';
 
 function App() {
   return (
+    // use of routes to navigate between pages..
     <BrowserRouter>
       <Routes>
         <Route path= "/" element={<Login/>}/>
         <Route path= "signup" element={<Signup/>}/>
         <Route path= "forgotpassword" element={<Forgotpassword/>}/>
 
-
+            {/* use of nested routing so that any non authorized user couldn't access the private pages. */}
             <Route path= "home" element={<Home/>}>
               
               <Route path="dash" element={<Dash/>}/>

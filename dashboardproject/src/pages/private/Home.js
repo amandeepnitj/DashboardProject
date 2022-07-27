@@ -7,9 +7,10 @@ import { auth } from "../../firebase/Firebase";
 import '../../helper/newsidebar.css'
 function Home(){
     const navigate = useNavigate();
-    const [user,loading, error] = useAuthState(auth);
+    
     function signout()
     {
+        //confirmation before signout
         let text = "Do you want to Signout from your account?"
         if(window.confirm(text)==true)
         {
@@ -37,7 +38,7 @@ function Home(){
       }
     return(
         <>
-       
+            {/* implementing sidebar */}
            <div className="sidebar">
                
                 <span className="active">Assignment-2</span>

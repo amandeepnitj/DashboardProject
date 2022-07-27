@@ -3,23 +3,26 @@ import '../helper/calculator.css'
 
 export default function Calculator()
 {
-
+    // use of hooks to store the data
     const [calc,setCalc] = useState("");
     const [res,setRes]= useState("");
     const ops = ['/','*','+','-','.']
 
     const updateCalc = value =>{
+        //checking if calc having more than 1 operator stored...
         if(ops.includes(value) && calc === '' ||
         ops.includes(value) && ops.includes(calc.slice(-1)))
         {
             return;
         }
         setCalc(calc + value)
+        //evaluating the result..
         if(!ops.includes(value))
         {
             setRes(eval(calc+value).toString())
         }
     }
+    // rendering the buttons 
     const createDigits=()=>{
         const digits = [];
         for (let i=1;i<10;i++)
@@ -30,11 +33,11 @@ export default function Calculator()
         }
         return digits;
     }
-
+    // storing data in hooks
     const calculate = () =>{
         setCalc(eval(calc).toString());
     }
-
+    // to delete the data from hook
     const deleteLast = () =>{
         if(calc!= '')
         {

@@ -5,13 +5,14 @@ import '../../src/helper/news.css'
 
 export default function  CanadaHolidays()
 {
+    //use of hooks to store the data get from api...
     const [data,setData] =useState({});
     
     const options = {
         method: 'GET',
         
     };
-
+    // use of hooks to fetch data from api .... first time user entered the component
     useEffect(()=>{
         const getdata = async () =>{
             fetch(`https://date.nager.at/api/v3/publicholidays/2022/CA`)

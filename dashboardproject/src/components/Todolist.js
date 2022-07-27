@@ -4,6 +4,7 @@ const Notes = props => props.data.map(note => <div>{note.text}</div>);
 
 export default function Todolist()
 {
+  //use of hooks to store the input string 
     const initialData = [{ text: '' }];
     const [data1, setData1] = useState(initialData);
 

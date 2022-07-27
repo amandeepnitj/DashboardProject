@@ -4,7 +4,7 @@ import '../../src/helper/weatherlive.css'
 
 
 export default function  Weatherlive()
-{
+{   //use of hooks to store the input string and data get from the api....
     const [data,setData] =useState({});
     const [location,setLocation] = useState('');
     // const location = "london"
@@ -48,6 +48,7 @@ export default function  Weatherlive()
         {data.current && <div className="container">
             <div className="top">
                 <div className="location">
+                    {/* check if data have info... only then it will render this part */}
                     <p className="p">{data.location? data.location.name: null}</p>
                 </div>
                 <div className="temp">

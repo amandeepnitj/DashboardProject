@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import {auth} from '../../firebase/Firebase'
 import "../../helper/index.css"
 function Forgotpassword(){
+    //using state to store email 
     const navigate = useNavigate();
     const [email,setEmail] = useState('');
     function forgotpassword()
     {
         if(email)
         {
+            // reset password link 
             sendPasswordResetEmail(auth,email)
             .then(()=>{
                 alert("please check your mail....")

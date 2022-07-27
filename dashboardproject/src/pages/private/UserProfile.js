@@ -2,6 +2,7 @@ import React from "react";
 import '../../helper/userprofile.css'
 export default function UserProfile()
 {
+    // this is simple static file... which displays the data of mine...
     return(
         <>
         <div className="flex-down center">

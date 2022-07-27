@@ -5,6 +5,7 @@ import {auth, db} from '../../firebase/Firebase'
 import { addDoc, collection } from 'firebase/firestore';
 import "../../helper/index.css"
 function Signup(){
+    //made three states email, password and confirm password.
     const navigate = useNavigate();
     const [email,setEmail] = useState("");
     const [password,Setpassword] = useState("")
@@ -17,6 +18,7 @@ function Signup(){
 
     function signup()
     {
+        //check on each input
         if(email.length<=0)
         {
             alert('please enter valid email')
@@ -33,6 +35,7 @@ function Signup(){
             alert("Passwords don't match")
             return;
         }
+        // authencating using auth()
         createUserWithEmailAndPassword(auth,email,password)
         .then(auth=>{console.log(auth)
         alert("User successfully created an account")
@@ -40,6 +43,7 @@ function Signup(){
         navigate('/')
     })
         .catch((error)=>{
+            //displaying the error code.
             if (error.code === "auth/email-already-in-use") {
                 alert("That email address is already in use!");
                 return;
