@@ -33,3 +33,12 @@
   background-color: rgb(5, 68, 104);
   height: 30px;
 }
+
+.minwidth {
+  min-width: 100px;
+  width: 30vw;
+  padding: 5px;
+}
+.padding10 {
+  padding: 10px;
+}

@@ -15,7 +15,7 @@
 
 .small-packet {
   min-height: 10px;
-  height: 25vh;
+  /* height: 25vh; */
   width: 20vw;
   min-width: 100px;
   border: 1px solid Black;
@@ -36,4 +36,14 @@
 
 .search_news input {
   width: 100%;
+}
+
+.fontsizel {
+  font-size: 17px;
+}
+.fontsizem {
+  font-size: 12px;
+}
+.padding5 {
+  padding: 5px;
 }

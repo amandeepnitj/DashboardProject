@@ -25,13 +25,13 @@ function Forgotpassword(){
     return(
         <div className='main'>
             <div className='center'>
-            <h1>Please enter the email that you have account</h1>
+            <h1>Please enter the registered email that you have account</h1>
 
-            <label>Password : </label>
-            <input autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
+            <label>Email : </label>
+            <input  className='minwidth' autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
             
             
-            <button className="" onClick={()=>{forgotpassword()}}>Submit</button>
+            <button className="padding10" onClick={()=>{forgotpassword()}}>Submit</button>
             
             </div>
         </div>

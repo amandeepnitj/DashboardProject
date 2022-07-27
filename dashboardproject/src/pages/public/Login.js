@@ -47,14 +47,14 @@ function Login(){
             <h1>Sign-in</h1>
 
             <label>E-mail : </label>
-            <input autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
+            <input className='minwidth' autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
             <label>Password : </label>
-            <input  autoComplete='off' type='password' name='password' onChange={(event)=>{Setpassword(event.target.value)}}></input>
-            <button className="" onClick={()=>{signin()}}>Sign In</button>
+            <input  className='minwidth' autoComplete='off' type='password' name='password' onChange={(event)=>{Setpassword(event.target.value)}}></input>
+            <button className="padding10" onClick={()=>{signin()}}>Sign In</button>
             <p>If you are new to our platform, create an account</p>
-            <button onClick={()=>{navigate('/signup')}}>Sign-Up</button>
+            <button className="padding10" onClick={()=>{navigate('/signup')}}>Sign-Up</button>
             <p>If you don't remember the password</p>
-            <button onClick={()=>{navigate('/forgotpassword')}}>Forgot Password</button>
+            <button className="padding10" onClick={()=>{navigate('/forgotpassword')}}>Forgot Password</button>
             </div>
         </div>
     )

@@ -61,16 +61,16 @@ function Signup(){
             <h1>Sign-Up</h1>
 
             <label>E-mail : </label>
-            <input autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
+            <input  className='minwidth' autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
             <label>Password : </label>
-            <input autoComplete='off' type='password' name='password' onChange={(event)=>{Setpassword(event.target.value)}}></input>
+            <input className='minwidth' autoComplete='off' type='password' name='password' onChange={(event)=>{Setpassword(event.target.value)}}></input>
             <label>Confirm Password : </label>
-            <input autoComplete='off' type='password' name='confirmpassword' onChange={(event)=>{Setconfirmpassword(event.target.value)}}></input>
+            <input className='minwidth' autoComplete='off' type='password' name='confirmpassword' onChange={(event)=>{Setconfirmpassword(event.target.value)}}></input>
             
-            <button className="" onClick={()=>{signup()}}>Sign Up</button>
+            <button className="padding10" onClick={()=>{signup()}}>Sign Up</button>
             <p>If you already have an account, please Login</p>
 
-            <button onClick={()=>{navigate('/')}}>Login</button>
+            <button className="padding10" onClick={()=>{navigate('/')}}>Login</button>
             </div>
         </div>
     )
