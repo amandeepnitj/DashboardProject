@@ -31,16 +31,7 @@ export default function  News()
         }
     }
 
-    const data1={
-        "articles":[
-            {title: "I'm a news.....I'm a news.....I'm a news.....I'm a news.....I'm a news....."},
-            {title:"I'm a news.....I'm a news.....I'm a news.....I'm a news.....I'm a news....."},
-            {title:"I'm a news.....I'm a news.....I'm a news.....I'm a news.....I'm a news....."},
-            {title:"I'm a news.....I'm a news.....I'm a news.....I'm a news.....I'm a news....."},
-            {title:"I'm a news.....I'm a news.....I'm a news.....I'm a news.....I'm a news....."},
-            {title:"I'm a news.....I'm a news.....I'm a news.....I'm a news.....I'm a news....."},
-        ]
-    }
+    
 
 
     return(
