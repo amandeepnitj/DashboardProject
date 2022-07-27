@@ -49,7 +49,7 @@ function Login(){
             <label>E-mail : </label>
             <input autoComplete="off" type='email' name='email' onChange={(event)=>{setEmail(event.target.value)}}/>
             <label>Password : </label>
-            <input autoComplete='off' type='password' name='password' onChange={(event)=>{Setpassword(event.target.value)}}></input>
+            <input  autoComplete='off' type='password' name='password' onChange={(event)=>{Setpassword(event.target.value)}}></input>
             <button className="" onClick={()=>{signin()}}>Sign In</button>
             <p>If you are new to our platform, create an account</p>
             <button onClick={()=>{navigate('/signup')}}>Sign-Up</button>

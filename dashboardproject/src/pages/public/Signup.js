@@ -1,13 +1,19 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {auth} from '../../firebase/Firebase'
+import {auth, db} from '../../firebase/Firebase'
+import { addDoc, collection } from 'firebase/firestore';
 import "../../helper/index.css"
 function Signup(){
     const navigate = useNavigate();
     const [email,setEmail] = useState("");
     const [password,Setpassword] = useState("")
     const [confirmpassword,Setconfirmpassword] = useState("");
+    const usersCollectionRef = collection(db,"users") 
+    const createUser = async () =>{
+        await addDoc(usersCollectionRef,{email: email})
+
+    }
 
     function signup()
     {
@@ -30,6 +36,7 @@ function Signup(){
         createUserWithEmailAndPassword(auth,email,password)
         .then(auth=>{console.log(auth)
         alert("User successfully created an account")
+        createUser();
         navigate('/')
     })
         .catch((error)=>{
@@ -62,6 +69,7 @@ function Signup(){
             
             <button className="" onClick={()=>{signup()}}>Sign Up</button>
             <p>If you already have an account, please Login</p>
+
             <button onClick={()=>{navigate('/')}}>Login</button>
             </div>
         </div>
