@@ -5,6 +5,8 @@ import {auth} from '../../firebase/Firebase'
 import "../../helper/index.css"
 
 function Login(){
+    //use of hooks for storing email and password 
+    // use of navigate state to navigate to new pages
     const navigate = useNavigate();
     const [email,setEmail] = useState("");
     const [password,Setpassword] = useState("")
@@ -13,6 +15,7 @@ function Login(){
     {
         // console.log(email);
         // console.log(password);
+        //managing the error caused by user
         if(email.length<=0)
         {
             alert('please enter valid email')
@@ -24,11 +27,12 @@ function Login(){
             return;
 
         }
-
+        // authenticating 
         signInWithEmailAndPassword(auth,email,password)
         .then(auth=>{console.log(auth);
         navigate('/home')})
         .catch((error)=>{
+            //managing the error codes....
             if (error.code === "auth/invalid-email") {
                 alert("Email provided is invalid");
               } else if (error.code === "auth/wrong-password") {
