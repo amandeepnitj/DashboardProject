@@ -43,7 +43,7 @@ function Home(){
                 <span className="active">Assignment-2</span>
                 
                 <ul>
-                <li><Link  to="/home/dash" className="link">Dashboard</Link></li>
+                <li><Link  to="/home/dash" className="link">Dashboard(News)</Link></li>
                 <li><Link  to="/home/listofusers" className="link">List of Users</Link></li>
                 <li><Link  to="/home/userprofile" className="link">User Profile</Link></li>
                 <li><Link  to="/home/weather" className="link">Weather</Link></li>

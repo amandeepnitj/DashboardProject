@@ -46,7 +46,7 @@
 .icon {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -66,9 +66,16 @@
     margin-left: 0px;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 729px) {
   .sidebar ul li * {
     text-align: center;
     float: none;
   }
+  .sidebar span.active {
+    display: none;
+  }
+  /* .sidebar span.icon {
+    float: right;
+    display: block;
+  } */
 }
